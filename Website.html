@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Website</title>
+  <style>
+    body {
+      background-color: #f9f9f9;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      color: #FFA500;
+    }
+
+    p {
+      color: #333;
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .happy-image {
+      margin-top: 40px;
+    }
+
+    .button {
+      background-color: #FFA500;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #FFC966;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to the Happy Website!</h1>
+  <p>Spread happiness and positivity all around.</p>
+  <img src="happy-image.jpg" alt="Happy Image" class="happy-image">
+  <p>Click the button below to generate a random happy quote:</p>
+  <button class="button" onclick="generateQuote()">Generate Quote</button>
+  <p id="quote"></p>
+
+  <script>
+    function generateQuote() {
+      var quotes = [
+        "The best way to cheer yourself up is to try to cheer somebody else up. - Mark Twain",
+        "Happiness is not something ready made. It comes from your own actions. - Dalai Lama",
+        "The only way to do great work is to love what you do. - Steve Jobs",
+        "The greatest pleasure in life is doing what people say you cannot do. - Walter Bagehot",
+        "The only limit to our realization of happiness is ourselves. - Ralph Waldo Emerson"
+      ];
+
+      var randomNumber = Math.floor(Math.random() * quotes.length);
+      document.getElementById("quote").innerHTML = quotes[randomNumber];
+    }
+  </script>
+</body>
+</html>
